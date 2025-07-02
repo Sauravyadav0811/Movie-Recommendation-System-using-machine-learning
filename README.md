@@ -49,22 +49,8 @@ This project builds a **movie recommendation system** that suggests similar movi
 * Score ranges from 0 (no similarity) to 1 (exact match).
 * Used for finding similar movies based on feature vectors.
 
----
 
-## 🌐 Live Demo
 
-👉 [Click here to try it live](https://movie-recommeder-system.herokuapp.com/)
-*(Hosted using Streamlit)*
-
----
-
-## 📷 Demo Snapshots
-
-|                 |                 |                 |
-| :-------------: | :-------------: | :-------------: |
-| ![](demo/1.png) | ![](demo/2.png) | ![](demo/3.png) |
-
----
 
 ## 🛠️ How to Run Locally
 
