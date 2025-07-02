@@ -93,7 +93,6 @@ streamlit run app.py
 
 ```
 ├── data/                  # Dataset files
-├── demo/                  # Demo images
 ├── src/                   # Source code
 ├── app.py                 # Streamlit app
 ├── requirements.txt       # Python dependencies
