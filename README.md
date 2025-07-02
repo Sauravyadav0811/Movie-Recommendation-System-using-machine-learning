@@ -1,130 +1,123 @@
-# Project: Movie Recommender System Using Machine Learning!
 
-<img src="demo/6.jpeg" alt="workflow" width="70%">
+# 🎬 Movie Recommender System Using Machine Learning
 
-Recommendation systems are becoming increasingly important in today’s extremely busy world. People are always short on time with the myriad tasks they need to accomplish in the limited 24 hours. Therefore, the recommendation systems are important as they help them make the right choices, without having to expend their cognitive resources.
+> A smart web app that helps you find movies you'll love — built using ML, Streamlit, and cosine similarity.
 
-The purpose of a recommendation system basically is to search for content that would be interesting to an individual. Moreover, it involves a number of factors to create personalised lists of useful and interesting content specific to each user/individual. Recommendation systems are Artificial Intelligence based algorithms that skim through all possible options and create a customized list of items that are interesting and relevant to an individual. These results are based on their profile, search/browsing history, what other people with similar traits/demographics are watching, and how likely are you to watch those movies. This is achieved through predictive modeling and heuristics with the data available.
+---
 
-# Types of Recommendation System :
+## 🚀 Overview
 
-### 1 ) Content Based :
+Recommendation systems are everywhere — from Netflix to Spotify — helping users discover content they’ll enjoy without spending hours searching.
 
-- Content-based systems, which use characteristic information and takes item attriubutes into consideration .
+This project builds a **movie recommendation system** that suggests similar movies based on user preferences using **content-based filtering** and **cosine similarity**.
 
-- Twitter , Youtube .
+---
 
-- Which music you are listening , what singer are you watching . Form embeddings for the features .
-	
-- User specific actions or similar items reccomendation .
-	
-- It will create a vector of it .
-	
-- These systems make recommendations using a user's item and profile features. They hypothesize that if a user was interested in an item in the past, they will once again be interested in it in the future
-	
-- One issue that arises is making obvious recommendations because of excessive specialization (user A is only interested in categories B, C, and D, and the system is not able to recommend items outside those categories, even though they could be interesting to them).
+## 🔍 Types of Recommendation Systems
 
-### 2 ) Collaborative Based :
-		
-- Collaborative filtering systems, which are based on user-item interactions.
-	
-- Clusters of users with same ratings , similar users .
-	
-- Book recommendation , so use cluster mechanism .
-	
-- We take only one parameter , ratings or comments .
-	
-- In short, collaborative filtering systems are based on the assumption that if a user likes item A and another user likes the same item A as well as another item, item B, the first user could also be interested in the second item . 
-	
-- Issues are :
+### 1️⃣ Content-Based Filtering
 
-	- User-Item nXn matrix , so computationally expensive .
+* Uses features like genre, cast, and keywords.
+* Suggests similar items to what the user liked before.
+* Examples: YouTube, Spotify.
 
-	- Only famous items will get reccomended .
+### 2️⃣ Collaborative Filtering
 
-	- New items might not get reccomended at all .   
+* Based on user-user or item-item interactions (ratings).
+* Example: Amazon, Goodreads.
+* Drawback: Cold-start problem and high computation for large data.
 
-### 3 ) Hybrid Based :
-	
-- Hybrid systems, which combine both types of information with the aim of avoiding problems that are generated when working with just one kind.
+### 3️⃣ Hybrid Filtering
 
-- Combination of both and used now a days .
+* Combines content-based and collaborative filtering.
+* Used by modern platforms for better recommendations.
 
-- Uses : word2vec , embedding .           
+---
 
-# About this project:
+## 📊 Dataset
 
-This is a streamlit web application that can recommend various kinds of similar movies based on an user interest.
-here is a demo,
+* Source: [TMDB Movie Metadata on Kaggle](https://www.kaggle.com/tmdb/tmdb-movie-metadata?select=tmdb_5000_movies.csv)
+* Used `tmdb_5000_movies.csv` for content-based filtering.
 
-* [Click here to run it live on server](https://movie-recommeder-system.herokuapp.com/)
+---
 
+## 🧠 ML Concept Used
 
-# Demo:
+**Cosine Similarity**
 
-<img src="demo/1.png" alt="workflow" width="70%">
+* Measures similarity between movie vectors.
+* Score ranges from 0 (no similarity) to 1 (exact match).
+* Used for finding similar movies based on feature vectors.
 
-<img src="demo/2.png" alt="workflow" width="70%">
+---
 
-<img src="demo/3.png" alt="workflow" width="70%">
+## 🌐 Live Demo
 
+👉 [Click here to try it live](https://movie-recommeder-system.herokuapp.com/)
+*(Hosted using Streamlit)*
 
-# Dataset has been used:
+---
 
-* [Dataset link](https://www.kaggle.com/tmdb/tmdb-movie-metadata?select=tmdb_5000_movies.csv)
+## 📷 Demo Snapshots
 
-# Concept used to build the model.pkl file : cosine_similarity
+|                 |                 |                 |
+| :-------------: | :-------------: | :-------------: |
+| ![](demo/1.png) | ![](demo/2.png) | ![](demo/3.png) |
 
-1 . Cosine Similarity is a metric that allows you to measure the similarity of the documents.
+---
 
-2 . In order to demonstrate cosine similarity function we need vectors. Here vectors are numpy array.
+## 🛠️ How to Run Locally
 
-3 . Finally, Once we have vectors, We can call cosine_similarity() by passing both vectors. It will calculate the cosine similarity between these two.
-
-4 . It will be a value between [0,1]. If it is 0 then both vectors are complete different. But in the place of that if it is 1, It will be completely similar.
-
-5 . For more details , check URL : https://www.learndatasci.com/glossary/cosine-similarity/
-
-# How to run?
-### STEPS:
-
-Clone the repository
+### 1️⃣ Clone the repository
 
 ```bash
-https://github.com/entbappy/Movie-Recommender-System-Using-Machine-Learning.git
+git clone https://github.com/Sauravyadav0811/Movie-Recommendation-System-using-machine-learning.git
+cd Movie-Recommendation-System-using-machine-learning
 ```
-### STEP 01- Create a conda environment after opening the repository
+
+### 2️⃣ Create and activate a conda environment
 
 ```bash
 conda create -n movie python=3.7.10 -y
-```
-
-```bash
 conda activate movie
 ```
 
+### 3️⃣ Install dependencies
 
-### STEP 02- install the requirements
 ```bash
 pip install -r requirements.txt
 ```
 
+### 4️⃣ Run the notebook to generate models
 
 ```bash
-#run this file to generate the models
-
+# Use Jupyter to run this
 Movie Recommender System Data Analysis.ipynb
 ```
 
-Now run,
+### 5️⃣ Start the app
+
 ```bash
 streamlit run app.py
 ```
 
+---
 
-```bash
-Author: Bappy Ahmed
-Data Scientist
-Email: entbappy73@gmail.com
+## 📂 Project Structure
 
 ```
+├── data/                  # Dataset files
+├── demo/                  # Demo images
+├── src/                   # Source code
+├── app.py                 # Streamlit app
+├── requirements.txt       # Python dependencies
+├── README.md              # Project documentation
+```
+
+---
+
+## 📘 License
+
+Licensed under the MIT License. See `LICENSE` for details.
+
+
